@@ -1,4 +1,4 @@
-package HomeWork1.MicroTasks;
+package Homework1.MicroTasks;
 
 import java.util.Random;
 import java.util.Scanner;

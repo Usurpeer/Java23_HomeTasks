@@ -1,4 +1,4 @@
-package HomeWork1.MicroTasks.Task1;
+package Homework1.MicroTasks.Task1;
 
 public class Task1 {
     public static void main(String[] args) {

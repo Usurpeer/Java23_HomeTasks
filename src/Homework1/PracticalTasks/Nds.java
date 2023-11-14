@@ -1,4 +1,4 @@
-package HomeWork1.PracticalTasks;
+package Homework1.PracticalTasks;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
