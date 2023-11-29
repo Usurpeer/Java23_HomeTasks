@@ -36,7 +36,7 @@ class Main {
 
         String itemId = "";
         String acticle = "";
-        double price = 15_000.03;
+        double price = 15_000.33;
         int countItems = 10;
 
         for (int i = startVal; i < startVal + 15; i++) {
@@ -65,7 +65,7 @@ class Main {
             System.out.println("Суммарная стоимость товаров, попадающих в список промо-акции.");
             String[] promoArticles = {"Article: 1", "Article: 2", "Article: 4", "Article: 5"};
             System.out.println("Список промо-акции: " + Arrays.toString(promoArticles));
-            System.out.println("\t" + doc.promoSum(promoArticles) + "\n\n");
+            System.out.println("\t" + doc.promoSum(promoArticles, 30) + "\n\n");
 
             if (doc.getDocumentType().equals("sale")) {
                 System.out.println("Является ли продажа оптовой для переданного минимального объема.");
