@@ -44,4 +44,13 @@ class SaleShipmentDocument extends ShipmentDocument {
         return sumQuantity >= minQuantity;
     }
 
+    // доработка: для sale суммарную стоимость промо-товаров в методе следует возвращать со скидкой, которая передается
+    // вторым параметром discount в процентах для каждого товара (с округлением до копеек в большую сторону)
+    public double promoSum(String[] promoArticles, int discountRate) {
+        double sum = promoSum(promoArticles);
+
+        sum = Math.ceil(sum * (1 - discountRate / 100.0) * 100) / 100.0;
+
+        return sum;
+    }
 }

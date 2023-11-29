@@ -62,12 +62,14 @@ class Main {
             System.out.println("Стоимость товара с переданным id: " + itemId);
             System.out.println("\t" + doc.itemAmount(itemId) + "\n\n");
 
-            System.out.println("Суммарная стоимость товаров, попадающих в список промо-акции.");
-            String[] promoArticles = {"Article: 1", "Article: 2", "Article: 4", "Article: 5"};
-            System.out.println("Список промо-акции: " + Arrays.toString(promoArticles));
-            System.out.println("\t" + doc.promoSum(promoArticles, 30) + "\n\n");
 
             if (doc.getDocumentType().equals("sale")) {
+                System.out.println("Суммарная стоимость товаров, попадающих в список промо-акции.");
+                String[] promoArticles = {"Article: 1", "Article: 2", "Article: 4", "Article: 5"};
+                System.out.println("Список промо-акции: " + Arrays.toString(promoArticles));
+                SaleShipmentDocument saleShipmentDocument = (SaleShipmentDocument) doc;
+                System.out.println("\t" + saleShipmentDocument.promoSum(promoArticles, 30) + "\n\n");
+
                 System.out.println("Является ли продажа оптовой для переданного минимального объема.");
 
                 double minQuantity1 = 1000000;
@@ -81,7 +83,13 @@ class Main {
 
                 SaleShipmentDocument s2 = (SaleShipmentDocument) doc;
                 System.out.println("\t" + s2.isWholesale(minQuantity2));
+
             } else if (doc.getDocumentType().equals("moving")) {
+                System.out.println("Суммарная стоимость товаров, попадающих в список промо-акции.");
+                String[] promoArticles = {"Article: 1", "Article: 2", "Article: 4", "Article: 5"};
+                System.out.println("Список промо-акции: " + Arrays.toString(promoArticles));
+                System.out.println("\t" + doc.promoSum(promoArticles) + "\n\n");
+
                 System.out.println("Является ли перемещение внутренним (между складами одного владельца).");
 
                 System.out.println("Для: " + doc.getStorageOwner());

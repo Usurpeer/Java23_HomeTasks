@@ -172,10 +172,7 @@ abstract class ShipmentDocument {
     }
 
     // Суммарная стоимость товаров, попадающих в список промо-акций
-    // Сказано "товаров", поэтому убрал "break" тк так было бы первого встретившегося товара
-    // доработка: для sale суммарную стоимость промо-товаров в методе следует возвращать со скидкой, которая передается
-    // вторым параметром discount в процентах для каждого товара (с округлением до копеек в большую сторону)
-    public double promoSum(String[] promoArticles, int discountRate) {
+    public double promoSum(String[] promoArticles) {
         int[] itemsQuantity = getItemsQuantity();
         double[] itemsPrice = getItemsPrice();
         String[] itemsArticle = getItemsArticle();
@@ -185,16 +182,12 @@ abstract class ShipmentDocument {
             for (String promoArticle : promoArticles) {
                 if (itemsArticle[i].equals(promoArticle)) {
                     sum += itemsQuantity[i] * itemsPrice[i];
+                    break;
                 }
             }
         }
 
-        sum = Math.ceil(sum * 100) / 100.0;
-
-        if (documentType.equals("sale")) {
-            sum = Math.ceil(sum * (1 - discountRate / 100.0) * 100) / 100.0;
-        }
-        return sum;
+        return Math.ceil(sum * 100) / 100.0;
     }
 
     public void addItem(Item item) {
