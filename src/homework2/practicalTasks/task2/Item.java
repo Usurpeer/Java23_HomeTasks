@@ -55,6 +55,9 @@ class Item {
         this.countItems = countItems;
     }
 
+    public double itemAmount(){
+        return Math.round(countItems * price * 100) / 100.0;
+    }
     public Item deepCopyItem() {
         return new Item(itemId, article, title, price, countItems);
     }

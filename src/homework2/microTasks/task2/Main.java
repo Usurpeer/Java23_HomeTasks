@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        GaussRandom gaussRandom = new GaussRandom(2);
+        GaussRandom gaussRandom = new GaussRandom(1);
 
         double[] standardNextNormal = new double[1000];
         double[] overloadNextNormal = new double[standardNextNormal.length];

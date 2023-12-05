@@ -19,7 +19,11 @@ class GaussRandom {
     }
 
     public double nextNormal(double m, double sigma) {
+        // переход к общему нормальному распределению
+        return m + sigma * nextNormal();
+    }
 
+    public synchronized double nextNormal() {
         // первый вариант преобразования Бокса-Мюллера
         double sqrt = Math.sqrt(-2 * Math.log(var2));
 
@@ -35,11 +39,6 @@ class GaussRandom {
             var2 = rnd.nextDouble();
         }
 
-        // переход к общему нормальному распределению
-        return m + sigma * z1;
-    }
-
-    public synchronized double nextNormal() {
-        return this.rnd.nextGaussian();
+        return z1;
     }
 }

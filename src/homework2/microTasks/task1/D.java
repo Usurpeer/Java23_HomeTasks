@@ -2,7 +2,7 @@ package homework2.microTasks.task1;
 
 import java.util.Date;
 
-public class D extends C {
+class D extends C {
     private E varD1;
 
     public E getVarD1() {

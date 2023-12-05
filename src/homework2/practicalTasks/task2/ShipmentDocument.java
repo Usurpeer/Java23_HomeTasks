@@ -163,12 +163,11 @@ abstract class ShipmentDocument {
     public double itemAmount(String id) {
         for (Item item : items) {
             if (item.getItemId().equals(id)) {
-                // Мне кажется округление не нужно
-                return Math.round(item.getCountItems() * item.getPrice() * 100) / 100.0;
+                return item.itemAmount();
             }
         }
 
-        return -1;
+        return 0;
     }
 
     // Суммарная стоимость товаров, попадающих в список промо-акций
