@@ -1,4 +1,5 @@
-import homework3.microTasks.task1.MonthInfo;
+package homework3.microTasks.task1;
+
 import org.junit.Test;
 
 import java.time.LocalDate;

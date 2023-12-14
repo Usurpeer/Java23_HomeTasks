@@ -6,18 +6,11 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/homework3" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/homework3/pracricalTasks" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/homework3/homework3" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/homework3/homework3/microTasks" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/homework3/homework3/microTasks/task1" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/homework3/homework3/microTasks/task2" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/homework3/homework3/microTasks/task3" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/homework3/microTasks" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/homework3/microTasks/task1" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/homework3/microTasks/task2" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/homework3/microTasks/task3" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/homework3/pracricalTasks/task1" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
