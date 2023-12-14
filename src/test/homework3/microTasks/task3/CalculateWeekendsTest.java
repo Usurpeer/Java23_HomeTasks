@@ -1,4 +1,5 @@
-import homework3.microTasks.task3.CalculateWeekends;
+package homework3.microTasks.task3;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;

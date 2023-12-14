@@ -1,3 +1,5 @@
+package homework3.pracricalTasks.task1;
+
 import static org.junit.Assert.*;
 
 import homework3.pracricalTasks.task1.Initializer;

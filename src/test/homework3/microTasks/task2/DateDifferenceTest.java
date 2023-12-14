@@ -1,5 +1,5 @@
+package homework3.microTasks.task2;
 
-import homework3.microTasks.task2.DateDifference;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
