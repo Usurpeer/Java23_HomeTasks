@@ -171,14 +171,14 @@ public class ArrayStatistics {
             sampleValues[i] = values[random.nextInt(0, values.length)];
         }
 
-        if (isCorrectSample(sampleValues)) {
-            return sampleValues;
-        } else {
-            return new int[0];
-        }
+        //if (isCorrectSample(sampleValues)) {
+        return sampleValues;
+        // } else {
+        //     return new int[0];
+        // }
     }
 
-    private boolean isCorrectSample(int[] sampleValues) {
+   /* private boolean isCorrectSample(int[] sampleValues) {
         boolean isCorrect;
         for (int sampleValue : sampleValues) {
             isCorrect = false;
@@ -193,5 +193,5 @@ public class ArrayStatistics {
             }
         }
         return true;
-    }
+    }*/
 }

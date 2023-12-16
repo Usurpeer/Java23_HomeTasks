@@ -24,6 +24,60 @@ public class ArrayStatisticsTest {
     }
 
     @Test
+    public void getSampleTest() {
+        int[] startArray = new int[]{
+                1, 8, 1, 9, 6, 4, 7, 8, 3, 10
+        };
+        ArrayStatistics arrayStatistics = new ArrayStatistics(startArray);
+
+        int[] sampleArr = arrayStatistics.getSample(5);
+        assertEquals(5, sampleArr.length);
+
+        assertTrue(isCorrectSample(startArray, sampleArr));
+
+    }
+
+    @Test
+    public void isCorrectSampleTest() {
+        int[] values = new int[]{
+                1, 8, 1, 9, 6, 4, 7, 8, 3, 10
+        };
+        int[] sampleValues1 = new int[]{
+                1, 8, 1, 9
+        };
+
+        assertTrue(isCorrectSample(values, sampleValues1));
+
+
+        int[] sampleValues2 = new int[]{
+                1, 8, 1, 9, 1, 1, 1, 1, 1, 8, 8, 8,
+        };
+        assertTrue(isCorrectSample(values, sampleValues2));
+
+        int[] sampleValues3 = new int[]{
+                1, 8, 12, 1, 9, 1, 13,
+        };
+        assertFalse(isCorrectSample(values, sampleValues3));
+    }
+
+    private boolean isCorrectSample(int[] values, int[] sampleValues) {
+        boolean isCorrect;
+        for (int sampleValue : sampleValues) {
+            isCorrect = false;
+            for (int value : values) {
+                if (sampleValue == value) {
+                    isCorrect = true;
+                    break;
+                }
+            }
+            if (!isCorrect) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    @Test
     public void testOnEmptyArray() {
         ArrayStatistics arrayStatistics = new ArrayStatistics(new int[0]);
 
@@ -148,7 +202,7 @@ public class ArrayStatisticsTest {
     }
 
     @Test
-    public void testMethodExceptions(){
+    public void testMethodExceptions() {
         int[] startArray = new int[]{
                 1, 8, 1, 9, 6, 4, 7, 8, 3, 10
         };
