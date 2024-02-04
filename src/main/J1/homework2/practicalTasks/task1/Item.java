@@ -1,4 +1,4 @@
-package homework2.practicalTasks.task1;
+package j1.homework2.practicalTasks.task1;
 
 class Item {
     private long article; // артикль товара

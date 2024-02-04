@@ -1,4 +1,4 @@
-package homework2.practicalTasks.task2;
+package j1.homework2.practicalTasks.task2;
 
 import java.util.Date;
 import java.util.List;

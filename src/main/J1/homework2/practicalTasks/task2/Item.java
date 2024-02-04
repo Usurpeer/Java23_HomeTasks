@@ -1,4 +1,4 @@
-package homework2.practicalTasks.task2;
+package j1.homework2.practicalTasks.task2;
 
 class Item {
     private String itemId; // GUID товара, хотел сделать UUID
